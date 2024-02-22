@@ -19,397 +19,409 @@
 </head>
 
 <body>
+    <!-- vue -->
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+
+
+
+    <div id="app">
+
+        <!-- barra superiore con sfondo verde -->
+        <header>
     
-    <!-- barra superiore con sfondo verde -->
-    <header>
-
-    </header>
-
-    <!-- container principale -->
-    <div class="container">
-
-        <!-- main -->
-        <main>
-
-            <!-- barra laterale con i contatti -->
-            <div id="left-bar">
-
-                <!-- barra profilo -->
-                <div class="profile flex">
-
+        </header>
+    
+        <!-- container principale -->
+        <div class="container">
+    
+            <!-- main -->
+            <main>
+    
+                <!-- barra laterale con i contatti -->
+                <div id="left-bar">
+    
+                    <!-- barra profilo -->
                     <div class="profile flex">
-                    <img src="./img/avatar_io.jpg" alt="immagine profilo utente">
-                    <h3>
-                        Sofia
-                    </h3>
-                    </div>
-
-                    <div class="profile-icons flex">
-                        <i class="fa-solid fa-circle-notch"></i>
-                        <i class="fa-solid fa-message"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                </div>
-
-                <!-- notifiche -->
-                <div id="notifications" class="flex">
-
-                    <div class="notification-icon flex">
-
-                        <i class="fa-solid fa-bell-slash"></i>
-
-                    </div>
-
-                    <div class="notification-info">
-
-                        <p>
-                            Ricevi notifiche di nuovi messaggi
-                        </p>
-
-                        <a href="#">Attiva notifiche desktop</a>
-                    </div>
-                </div>
-
-                <!-- barra di ricerca -->
-                <div class="search-bar flex">
-
-                    <div class="button flex">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
-                </div>
-
-                <!-- lista delle chat -->
-                <div id="chat-list">
-
-                    <div class="chat flex ">
-
-                        <div class="chat-profile flex">
-                            
-                            <!-- immagine -->
-                            <img src="./img/avatar_1.jpg" alt="">
-
-                            <!-- info contatto -->
-                            <div class="contact-info flex">
-        
-                                <h3>
-                                    Michele
-                                </h3>
-        
-                                <p>
-                                    Ultimo messaggio inviato
-                                </p>
-        
-                            </div>
-
-                        </div>
-
-                        <p class="time flex">
-                            12:00
-                        </p>
-
-                    </div>
-
-                    <div class="chat flex ">
-
-                        <div class="chat-profile flex">
-                            
-                            <!-- immagine -->
-                            <img src="./img/avatar_1.jpg" alt="">
-
-                            <!-- info contatto -->
-                            <div class="contact-info flex">
-        
-                                <h3>
-                                    Michele
-                                </h3>
-        
-                                <p>
-                                    Ultimo messaggio inviato
-                                </p>
-        
-                            </div>
-
-                        </div>
-
-                        <p class="time flex">
-                            12:00
-                        </p>
-
-                    </div>
-
-                    <div class="chat flex ">
-
-                        <div class="chat-profile flex">
-                            
-                            <!-- immagine -->
-                            <img src="./img/avatar_1.jpg" alt="">
-
-                            <!-- info contatto -->
-                            <div class="contact-info flex">
-        
-                                <h3>
-                                    Michele
-                                </h3>
-        
-                                <p>
-                                    Ultimo messaggio inviato
-                                </p>
-        
-                            </div>
-
-                        </div>
-
-                        <p class="time flex">
-                            12:00
-                        </p>
-
-                    </div>
-                    <div class="chat flex ">
-
-                        <div class="chat-profile flex">
-                            
-                            <!-- immagine -->
-                            <img src="./img/avatar_1.jpg" alt="">
-
-                            <!-- info contatto -->
-                            <div class="contact-info flex">
-        
-                                <h3>
-                                    Michele
-                                </h3>
-        
-                                <p>
-                                    Ultimo messaggio inviato
-                                </p>
-        
-                            </div>
-
-                        </div>
-
-                        <p class="time flex">
-                            12:00
-                        </p>
-
-                    </div>
-                    <div class="chat flex ">
-
-                        <div class="chat-profile flex">
-                            
-                            <!-- immagine -->
-                            <img src="./img/avatar_1.jpg" alt="">
-
-                            <!-- info contatto -->
-                            <div class="contact-info flex">
-        
-                                <h3>
-                                    Michele
-                                </h3>
-        
-                                <p>
-                                    Ultimo messaggio inviato
-                                </p>
-        
-                            </div>
-
-                        </div>
-
-                        <p class="time flex">
-                            12:00
-                        </p>
-
-                    </div>
-                    <div class="chat flex ">
-
-                        <div class="chat-profile flex">
-                            
-                            <!-- immagine -->
-                            <img src="./img/avatar_1.jpg" alt="">
-
-                            <!-- info contatto -->
-                            <div class="contact-info flex">
-        
-                                <h3>
-                                    Michele
-                                </h3>
-        
-                                <p>
-                                    Ultimo messaggio inviato
-                                </p>
-        
-                            </div>
-
-                        </div>
-
-                        <p class="time flex">
-                            12:00
-                        </p>
-
-                    </div>
-                    <div class="chat flex ">
-
-                        <div class="chat-profile flex">
-                            
-                            <!-- immagine -->
-                            <img src="./img/avatar_1.jpg" alt="">
-
-                            <!-- info contatto -->
-                            <div class="contact-info flex">
-        
-                                <h3>
-                                    Michele
-                                </h3>
-        
-                                <p>
-                                    Ultimo messaggio inviato
-                                </p>
-        
-                            </div>
-
-                        </div>
-
-                        <p class="time flex">
-                            12:00
-                        </p>
-
-                    </div>
-                    <div class="chat flex ">
-
-                        <div class="chat-profile flex">
-                            
-                            <!-- immagine -->
-                            <img src="./img/avatar_1.jpg" alt="">
-
-                            <!-- info contatto -->
-                            <div class="contact-info flex">
-        
-                                <h3>
-                                    Michele
-                                </h3>
-        
-                                <p>
-                                    Ultimo messaggio inviato
-                                </p>
-        
-                            </div>
-
-                        </div>
-
-                        <p class="time flex">
-                            12:00
-                        </p>
-
-                    </div>
-                    
-
-                </div>
-
-            </div>
-
-            <!-- contenuto principale della chat -->
-            <div id="main-content">
-
-                <!-- barra profilo -->
-                <div class="profile flex">
-
-                    <div class="chat-profile flex">
-                            
-                        <!-- immagine -->
-                        <img src="./img/avatar_1.jpg" alt="">
-
-                        <!-- info contatto -->
-                        <div class="contact-info flex">
     
-                            <h3>
-                                Michele
-                            </h3>
+                        <div class="profile flex">
+                        <img src="./img/avatar_io.jpg" alt="immagine profilo utente">
+                        <h3>
+                            Sofia
+                        </h3>
+                        </div>
+    
+                        <div class="profile-icons flex">
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+    
+                    <!-- notifiche -->
+                    <div id="notifications" class="flex">
+    
+                        <div class="notification-icon flex">
+    
+                            <i class="fa-solid fa-bell-slash"></i>
+    
+                        </div>
+    
+                        <div class="notification-info">
     
                             <p>
-                                Ultimo accesso oggi alle 12:00
+                                Ricevi notifiche di nuovi messaggi
+                            </p>
+    
+                            <a href="#">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+    
+                    <!-- barra di ricerca -->
+                    <div class="search-bar flex">
+    
+                        <div class="button flex">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+    
+                        <input id="search-input" type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+    
+                    <!-- lista delle chat -->
+                    <div id="chat-list">
+    
+                        <div class="chat flex ">
+    
+                            <div class="chat-profile flex">
+                                
+                                <!-- immagine -->
+                                <img src="./img/avatar_1.jpg" alt="">
+    
+                                <!-- info contatto -->
+                                <div class="contact-info flex">
+            
+                                    <h3>
+                                        Michele
+                                    </h3>
+            
+                                    <p>
+                                        Ultimo messaggio inviato
+                                    </p>
+            
+                                </div>
+    
+                            </div>
+    
+                            <p class="time flex">
+                                12:00
                             </p>
     
                         </div>
-
+    
+                        <div class="chat flex ">
+    
+                            <div class="chat-profile flex">
+                                
+                                <!-- immagine -->
+                                <img src="./img/avatar_1.jpg" alt="">
+    
+                                <!-- info contatto -->
+                                <div class="contact-info flex">
+            
+                                    <h3>
+                                        Michele
+                                    </h3>
+            
+                                    <p>
+                                        Ultimo messaggio inviato
+                                    </p>
+            
+                                </div>
+    
+                            </div>
+    
+                            <p class="time flex">
+                                12:00
+                            </p>
+    
+                        </div>
+    
+                        <div class="chat flex ">
+    
+                            <div class="chat-profile flex">
+                                
+                                <!-- immagine -->
+                                <img src="./img/avatar_1.jpg" alt="">
+    
+                                <!-- info contatto -->
+                                <div class="contact-info flex">
+            
+                                    <h3>
+                                        Michele
+                                    </h3>
+            
+                                    <p>
+                                        Ultimo messaggio inviato
+                                    </p>
+            
+                                </div>
+    
+                            </div>
+    
+                            <p class="time flex">
+                                12:00
+                            </p>
+    
+                        </div>
+                        <div class="chat flex ">
+    
+                            <div class="chat-profile flex">
+                                
+                                <!-- immagine -->
+                                <img src="./img/avatar_1.jpg" alt="">
+    
+                                <!-- info contatto -->
+                                <div class="contact-info flex">
+            
+                                    <h3>
+                                        Michele
+                                    </h3>
+            
+                                    <p>
+                                        Ultimo messaggio inviato
+                                    </p>
+            
+                                </div>
+    
+                            </div>
+    
+                            <p class="time flex">
+                                12:00
+                            </p>
+    
+                        </div>
+                        <div class="chat flex ">
+    
+                            <div class="chat-profile flex">
+                                
+                                <!-- immagine -->
+                                <img src="./img/avatar_1.jpg" alt="">
+    
+                                <!-- info contatto -->
+                                <div class="contact-info flex">
+            
+                                    <h3>
+                                        Michele
+                                    </h3>
+            
+                                    <p>
+                                        Ultimo messaggio inviato
+                                    </p>
+            
+                                </div>
+    
+                            </div>
+    
+                            <p class="time flex">
+                                12:00
+                            </p>
+    
+                        </div>
+                        <div class="chat flex ">
+    
+                            <div class="chat-profile flex">
+                                
+                                <!-- immagine -->
+                                <img src="./img/avatar_1.jpg" alt="">
+    
+                                <!-- info contatto -->
+                                <div class="contact-info flex">
+            
+                                    <h3>
+                                        Michele
+                                    </h3>
+            
+                                    <p>
+                                        Ultimo messaggio inviato
+                                    </p>
+            
+                                </div>
+    
+                            </div>
+    
+                            <p class="time flex">
+                                12:00
+                            </p>
+    
+                        </div>
+                        <div class="chat flex ">
+    
+                            <div class="chat-profile flex">
+                                
+                                <!-- immagine -->
+                                <img src="./img/avatar_1.jpg" alt="">
+    
+                                <!-- info contatto -->
+                                <div class="contact-info flex">
+            
+                                    <h3>
+                                        Michele
+                                    </h3>
+            
+                                    <p>
+                                        Ultimo messaggio inviato
+                                    </p>
+            
+                                </div>
+    
+                            </div>
+    
+                            <p class="time flex">
+                                12:00
+                            </p>
+    
+                        </div>
+                        <div class="chat flex ">
+    
+                            <div class="chat-profile flex">
+                                
+                                <!-- immagine -->
+                                <img src="./img/avatar_1.jpg" alt="">
+    
+                                <!-- info contatto -->
+                                <div class="contact-info flex">
+            
+                                    <h3>
+                                        Michele
+                                    </h3>
+            
+                                    <p>
+                                        Ultimo messaggio inviato
+                                    </p>
+            
+                                </div>
+    
+                            </div>
+    
+                            <p class="time flex">
+                                12:00
+                            </p>
+    
+                        </div>
+                        
+    
                     </div>
-
-                    <div class="profile-icons flex">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <i class="fa-solid fa-paperclip"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-
+    
                 </div>
-
-                <!-- contenuto della chat -->
-                <div class="chat-content flex">
-
-                    <div class="message recieved">
-                        <p>
-                            Ciao Sofia come stai?
-                        </p>
-                        <div class="time">
-                            16:15
+    
+                <!-- contenuto principale della chat -->
+                <div id="main-content">
+    
+                    <!-- barra profilo -->
+                    <div class="profile flex">
+    
+                        <div class="chat-profile flex">
+                                
+                            <!-- immagine -->
+                            <img src="./img/avatar_1.jpg" alt="">
+    
+                            <!-- info contatto -->
+                            <div class="contact-info flex">
+        
+                                <h3>
+                                    Michele
+                                </h3>
+        
+                                <p>
+                                    Ultimo accesso oggi alle 12:00
+                                </p>
+        
+                            </div>
+    
+                        </div>
+    
+                        <div class="profile-icons flex">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+    
+                    </div>
+    
+                    <!-- contenuto della chat -->
+                    <div class="chat-content flex">
+    
+                        <div class="message recieved">
+                            <p>
+                                Ciao Sofia come stai?
+                            </p>
+                            <div class="time">
+                                16:15
+                            </div>
+                        </div>
+    
+                        <div class="message sent">
+                            <p>
+                                Ciao michele! Tutto bene grazie e tu?
+                            </p>
+                            <div class="time">
+                                16:15
+                            </div>
+                        </div>
+    
+                        <div class="message sent">
+                            <p>
+                                Non ci sentiamo da un po' di tempo aa
+                            </p>
+                            <div class="time">
+                                16:15
+                            </div>
+                        </div>
+                        <div class="message sent">
+                            <p>
+                                Saranno passati due anni dall'ultima volta
+                            </p>
+                            <div class="time">
+                                16:15
+                            </div>
+                        </div>
+                        <div class="message recieved">
+                            <p>
+                                Tutto bene grazie
+                            </p>
+                            <div class="time">
+                                16:15
+                            </div>
+                        </div>
+    
+    
+                    </div>
+    
+                    <!-- bottom bar per inviare messaggio -->
+                    <div id="send-message-bar" class="flex">
+    
+                        <div class="chat-emotes flex">
+                            <i class="fa-regular fa-face-smile"></i>
+                        </div>
+    
+                        <div class="message-bar">
+                            <input id="message-input" type="text" placeholder="Scrivi un messaggio">
+                        </div>
+    
+                        <div class="send-message flex">
+                            <i class="fa-solid fa-paper-plane"></i>
                         </div>
                     </div>
-
-                    <div class="message sent">
-                        <p>
-                            Ciao michele! Tutto bene grazie e tu?
-                        </p>
-                        <div class="time">
-                            16:15
-                        </div>
-                    </div>
-
-                    <div class="message sent">
-                        <p>
-                            Non ci sentiamo da un po' di tempo aa
-                        </p>
-                        <div class="time">
-                            16:15
-                        </div>
-                    </div>
-                    <div class="message sent">
-                        <p>
-                            Saranno passati due anni dall'ultima volta
-                        </p>
-                        <div class="time">
-                            16:15
-                        </div>
-                    </div>
-                    <div class="message recieved">
-                        <p>
-                            Tutto bene grazie
-                        </p>
-                        <div class="time">
-                            16:15
-                        </div>
-                    </div>
-
-
+    
                 </div>
-
-                <!-- bottom bar per inviare messaggio -->
-                <div id="send-message-bar" class="flex">
-
-                    <div class="chat-emotes flex">
-                        <i class="fa-regular fa-face-smile"></i>
-                    </div>
-
-                    <div class="message-bar">
-                        <input type="text" placeholder="Scrivi un messaggio">
-                    </div>
-
-                    <div class="send-message flex">
-                        <i class="fa-solid fa-paper-plane"></i>
-                    </div>
-                </div>
-
-            </div>
-        </main>
+            </main>
+    
+        </div>
 
     </div>
+    
 
+
+    <!-- script.js -->
+    <script src="./js/script.js"></script>
 </body>
 </html>
