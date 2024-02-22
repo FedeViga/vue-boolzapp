@@ -12,9 +12,22 @@
     border: 2px dashed red;
 }
 
+.flex {
+    display: flex;
+}
+
 .profile {
     height: 70px;
     background-color: #EAEAEA;
+
+    align-items: center;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0px 10px;
 }
 /* fine common */
 
@@ -64,14 +77,73 @@ main {
     height: 100%;
 }
 
+#left-bar .profile {
+    justify-content: space-between;
+}
+
+.profile-icons {
+    justify-self: flex-end;
+    gap: 10px;
+    padding-right: 20px;
+    color: #B1B1B1;
+    font-size: 20px;
+
+}
+
 #notifications {
     height: 84px;
     background-color: #8EDAFC;
+
+    align-items: center;
+    gap: 10px;
+    padding: 0px 20px;
+}
+
+.notification-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #F2FBFF;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.notification-icon i {
+    color: #8EDAFC;
+    font-size: 20px;
+}
+
+.notification-info a {
+    color: gray;
+    font-size: 14px;
 }
 
 .search-bar {
     height: 50px;
     background-color: white;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.search-bar .button {
+    width: 75px;
+    height: 36px;
+
+    justify-content: center;
+    align-items: center;
+    border-color: white;
+    border: 2px solid lightgray;
+    border-right: 0px;
+    color: lightgray;
+    cursor: pointer;
+
+}
+
+.search-bar input {
+    width: 100%;
+    height: 36px;
+    border: 2px solid lightgray;
 }
 
 #chat-list {
@@ -82,6 +154,27 @@ main {
 
 .chat {
     height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+
+.chat-profile {
+    align-items: center;
+    padding-left: 20px;
+    gap: 20px;
+}
+
+.chat img {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+}
+
+.chat .time {
+    padding: 10px;
+    align-self: flex-start;
+    font-size: 14px;
 }
 /* fine left bar */
 
@@ -90,6 +183,14 @@ main {
 #main-content {
     width: 70%;
     height: 100%;
+}
+
+.contact-info {
+    flex-direction: column;
+}
+
+.contact-info p {
+    font-size: 14px;
 }
 
 .chat-content {
