@@ -181,11 +181,17 @@ createApp({
 
     methods: {
         
+        // metodo per visualizzare in pagina i messaggi aL click delle chat
         activeChat(index) {
 
             this.currentChat = index
-            
+
         },
+
+        // metodo per convertire la data in ore e minuti
+        getHoursMins(date) {
+            return date.slice(11).slice(0, 5);
+        }
     }
 
 }).mount('#app');

@@ -109,7 +109,7 @@
                                     </h3>
             
                                     <p>
-                                        Ultimo messaggio inviato
+                                        {{currentContact.messages[currentContact.messages.length - 1].message}}
                                     </p>
             
                                 </div>
@@ -117,7 +117,7 @@
                             </div>
     
                             <p class="time flex">
-                                12:00
+                                {{getHoursMins(currentContact.messages[currentContact.messages.length - 1].date)}}
                             </p>
     
                         </div>
@@ -130,18 +130,21 @@
                 <div id="main-content">
     
                     <!-- barra profilo -->
-                    <div class="profile flex">
+                    <div v-for="(currentContact, index) in contacts"
+                        v-show="index == currentChat"
+                        class="profile flex"
+                    >
     
                         <div class="chat-profile flex">
                                 
                             <!-- immagine -->
-                            <img src="./img/avatar_1.jpg" alt="">
+                            <img :src="currentContact.avatar" :alt="'immagine profilo ' + (index + 1)">
     
                             <!-- info contatto -->
                             <div class="contact-info flex">
         
                                 <h3>
-                                    Michele
+                                    {{currentContact.name}}
                                 </h3>
         
                                 <p>
@@ -174,7 +177,7 @@
                                 {{currentMessage.message}}
                             </p>
                             <div class="time">
-                                {{currentMessage.date}}
+                                {{getHoursMins(currentMessage.date)}}
                             </div>
                         </div>
     
