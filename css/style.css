@@ -5,3 +5,68 @@
     box-sizing: border-box;
 }
 /* fine reset */
+
+
+/* common */
+.test {
+    border: 2px dashed red;
+}
+/* fine common */
+
+
+/* body */
+body {
+    background-color: #DCDBD2;
+    font-family: "Open Sans", sans-serif;
+}
+/* fine body */
+
+
+/* header */
+header {
+    background-color: #009688;
+    height: 150px;
+    width: 100%;
+}
+/* fine header */
+
+
+/* container */
+.container {
+    max-width: 1600px;
+    margin: auto;
+    padding: 0px 10px;
+}
+/* fine container */
+
+
+/* main */
+main {
+    display: flex;
+    width: 100%;
+    position: relative;
+    top: -125px;
+
+    /* test */
+    height: 960px;
+}
+/* fine main */
+
+
+/* left bar */
+#left-bar {
+    width: 30%;
+    height: 100%;
+}
+/* fine left bar */
+
+
+/* main content */
+#main-content {
+    width: 70%;
+    height: 100%;
+}
+/* fine main content */
+
+
+
