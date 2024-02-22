@@ -8,6 +8,8 @@ createApp({
 
         return {
             
+            currentChat: 0,
+
             contacts: [
                 {
                     name: 'Michele',
@@ -179,7 +181,11 @@ createApp({
 
     methods: {
         
-        
+        activeChat(index) {
+
+            this.currentChat = index
+            
+        },
     }
 
 }).mount('#app');

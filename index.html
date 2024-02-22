@@ -91,7 +91,10 @@
     
                         <div 
                             v-for="(currentContact, index) in contacts"
-                            class="chat flex ">
+                            class="chat flex "
+                            :class="index == currentChat ? 'active' : ''"
+                            @click="activeChat(index)"
+                        >
     
                             <div class="chat-profile flex">
                                 
@@ -158,50 +161,23 @@
                     </div>
     
                     <!-- contenuto della chat -->
-                    <div class="chat-content flex">
+                    <div 
+                        v-for="(currentContact, index) in contacts"
+                        v-show="index == currentChat"
+                        class="chat-content flex"
+                    >
     
-                        <div class="message recieved">
+                        <div 
+                            v-for="currentMessage in contacts[index].messages"
+                            :class="'message ' + currentMessage.status">
                             <p>
-                                Ciao Sofia come stai?
+                                {{currentMessage.message}}
                             </p>
                             <div class="time">
-                                16:15
-                            </div>
-                        </div>
-    
-                        <div class="message sent">
-                            <p>
-                                Ciao michele! Tutto bene grazie e tu?
-                            </p>
-                            <div class="time">
-                                16:15
+                                {{currentMessage.date}}
                             </div>
                         </div>
     
-                        <div class="message sent">
-                            <p>
-                                Non ci sentiamo da un po' di tempo aa
-                            </p>
-                            <div class="time">
-                                16:15
-                            </div>
-                        </div>
-                        <div class="message sent">
-                            <p>
-                                Saranno passati due anni dall'ultima volta
-                            </p>
-                            <div class="time">
-                                16:15
-                            </div>
-                        </div>
-                        <div class="message recieved">
-                            <p>
-                                Tutto bene grazie
-                            </p>
-                            <div class="time">
-                                16:15
-                            </div>
-                        </div>
     
     
                     </div>
