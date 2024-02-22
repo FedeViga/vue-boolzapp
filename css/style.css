@@ -11,6 +11,11 @@
 .test {
     border: 2px dashed red;
 }
+
+.profile {
+    height: 70px;
+    background-color: #EAEAEA;
+}
 /* fine common */
 
 
@@ -58,13 +63,43 @@ main {
     width: 30%;
     height: 100%;
 }
-/* fine left bar */
 
+#notifications {
+    height: 84px;
+    background-color: #8EDAFC;
+}
+
+.search-bar {
+    height: 50px;
+    background-color: white;
+}
+
+#chat-list {
+    overflow-y: scroll;
+    background-color: white;
+    height: calc(100% - 70px - 84px - 50px);
+}
+
+.chat {
+    height: 80px;
+}
+/* fine left bar */
 
 /* main content */
 #main-content {
     width: 70%;
     height: 100%;
+}
+
+.chat-content {
+    background-image: url(../img/mine.jpg);
+    height: calc(100% - 70px - 74px);
+    overflow-y: scroll;
+}
+
+#send-message-bar {
+    height: 74px;
+    background-color: #F3EEEA;
 }
 /* fine main content */
 
