@@ -41,6 +41,7 @@ header {
     max-width: 1600px;
     margin: auto;
     padding: 0px 10px;
+    height: calc(100vh - 150px);
 }
 /* fine container */
 
@@ -49,11 +50,10 @@ header {
 main {
     display: flex;
     width: 100%;
+    height: 100%;
+    height: calc(100vh - 25px - 25px);
     position: relative;
     top: -125px;
-
-    /* test */
-    height: 960px;
 }
 /* fine main */
 
@@ -84,6 +84,7 @@ main {
     height: 80px;
 }
 /* fine left bar */
+
 
 /* main content */
 #main-content {
