@@ -89,18 +89,20 @@
                     <!-- lista delle chat -->
                     <div id="chat-list">
     
-                        <div class="chat flex ">
+                        <div 
+                            v-for="(currentContact, index) in contacts"
+                            class="chat flex ">
     
                             <div class="chat-profile flex">
                                 
                                 <!-- immagine -->
-                                <img src="./img/avatar_1.jpg" alt="">
+                                <img :src="currentContact.avatar" :alt="'immagine profilo ' + (index + 1)">
     
                                 <!-- info contatto -->
                                 <div class="contact-info flex">
             
                                     <h3>
-                                        Michele
+                                        {{currentContact.name}}
                                     </h3>
             
                                     <p>
@@ -116,198 +118,6 @@
                             </p>
     
                         </div>
-    
-                        <div class="chat flex ">
-    
-                            <div class="chat-profile flex">
-                                
-                                <!-- immagine -->
-                                <img src="./img/avatar_1.jpg" alt="">
-    
-                                <!-- info contatto -->
-                                <div class="contact-info flex">
-            
-                                    <h3>
-                                        Michele
-                                    </h3>
-            
-                                    <p>
-                                        Ultimo messaggio inviato
-                                    </p>
-            
-                                </div>
-    
-                            </div>
-    
-                            <p class="time flex">
-                                12:00
-                            </p>
-    
-                        </div>
-    
-                        <div class="chat flex ">
-    
-                            <div class="chat-profile flex">
-                                
-                                <!-- immagine -->
-                                <img src="./img/avatar_1.jpg" alt="">
-    
-                                <!-- info contatto -->
-                                <div class="contact-info flex">
-            
-                                    <h3>
-                                        Michele
-                                    </h3>
-            
-                                    <p>
-                                        Ultimo messaggio inviato
-                                    </p>
-            
-                                </div>
-    
-                            </div>
-    
-                            <p class="time flex">
-                                12:00
-                            </p>
-    
-                        </div>
-                        <div class="chat flex ">
-    
-                            <div class="chat-profile flex">
-                                
-                                <!-- immagine -->
-                                <img src="./img/avatar_1.jpg" alt="">
-    
-                                <!-- info contatto -->
-                                <div class="contact-info flex">
-            
-                                    <h3>
-                                        Michele
-                                    </h3>
-            
-                                    <p>
-                                        Ultimo messaggio inviato
-                                    </p>
-            
-                                </div>
-    
-                            </div>
-    
-                            <p class="time flex">
-                                12:00
-                            </p>
-    
-                        </div>
-                        <div class="chat flex ">
-    
-                            <div class="chat-profile flex">
-                                
-                                <!-- immagine -->
-                                <img src="./img/avatar_1.jpg" alt="">
-    
-                                <!-- info contatto -->
-                                <div class="contact-info flex">
-            
-                                    <h3>
-                                        Michele
-                                    </h3>
-            
-                                    <p>
-                                        Ultimo messaggio inviato
-                                    </p>
-            
-                                </div>
-    
-                            </div>
-    
-                            <p class="time flex">
-                                12:00
-                            </p>
-    
-                        </div>
-                        <div class="chat flex ">
-    
-                            <div class="chat-profile flex">
-                                
-                                <!-- immagine -->
-                                <img src="./img/avatar_1.jpg" alt="">
-    
-                                <!-- info contatto -->
-                                <div class="contact-info flex">
-            
-                                    <h3>
-                                        Michele
-                                    </h3>
-            
-                                    <p>
-                                        Ultimo messaggio inviato
-                                    </p>
-            
-                                </div>
-    
-                            </div>
-    
-                            <p class="time flex">
-                                12:00
-                            </p>
-    
-                        </div>
-                        <div class="chat flex ">
-    
-                            <div class="chat-profile flex">
-                                
-                                <!-- immagine -->
-                                <img src="./img/avatar_1.jpg" alt="">
-    
-                                <!-- info contatto -->
-                                <div class="contact-info flex">
-            
-                                    <h3>
-                                        Michele
-                                    </h3>
-            
-                                    <p>
-                                        Ultimo messaggio inviato
-                                    </p>
-            
-                                </div>
-    
-                            </div>
-    
-                            <p class="time flex">
-                                12:00
-                            </p>
-    
-                        </div>
-                        <div class="chat flex ">
-    
-                            <div class="chat-profile flex">
-                                
-                                <!-- immagine -->
-                                <img src="./img/avatar_1.jpg" alt="">
-    
-                                <!-- info contatto -->
-                                <div class="contact-info flex">
-            
-                                    <h3>
-                                        Michele
-                                    </h3>
-            
-                                    <p>
-                                        Ultimo messaggio inviato
-                                    </p>
-            
-                                </div>
-    
-                            </div>
-    
-                            <p class="time flex">
-                                12:00
-                            </p>
-    
-                        </div>
-                        
     
                     </div>
     
