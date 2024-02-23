@@ -75,11 +75,20 @@
                     <!-- barra di ricerca -->
                     <div class="search-bar flex">
     
-                        <div class="button flex">
+                        <div 
+                            @click="filterChat()"
+                            class="button flex"
+                        >
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
     
-                        <input id="search-input" type="search" placeholder="Cerca o inizia una nuova chat">
+                        <input 
+                            @keyup.enter="filterChat"
+                            v-model="ChatUserName"
+                            id="search-input" 
+                            type="search" 
+                            placeholder="Cerca o inizia una nuova chat"
+                        >
                     </div>
     
                     <!-- lista delle chat -->
@@ -87,6 +96,7 @@
     
                         <div 
                             v-for="(currentContact, index) in contacts"
+                            v-show="currentContact.visible"
                             class="chat flex "
                             :class="index == currentChat ? 'active' : ''"
                             @click="activeChat(index)"

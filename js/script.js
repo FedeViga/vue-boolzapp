@@ -186,6 +186,8 @@ createApp({
                 status: 'received',
                 date: '10/01/2020 15:30:55'
             },
+
+            ChatUserName: ''
             
 
         }
@@ -226,7 +228,21 @@ createApp({
             
         },
 
-        
+        // funzione per filtrare i contatti
+        filterChat() {
+            this.contacts.forEach(currentContact => {
+                
+                if(currentContact.name.toLowerCase().includes(this.ChatUserName.toLowerCase())) {
+
+                    currentContact.visible = true;
+
+                } else {
+
+                    currentContact.visible = false;
+
+                }
+            });
+        }
     }
 
 }).mount('#app');
