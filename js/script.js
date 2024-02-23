@@ -172,7 +172,14 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
+
+
+            newMessage: {
+                message: '',
+                status: 'sent',
+                date: '10/01/2020 15:30:55'
+            }
             
 
         }
@@ -191,6 +198,16 @@ createApp({
         // metodo per convertire la data in ore e minuti
         getHoursMins(date) {
             return date.slice(11).slice(0, 5);
+        },
+
+        // metodo per inviare nuovo messaggio
+        sendMessage() {
+            if(this.newMessage.message.trim() != '') {
+
+                this.contacts[this.currentChat].messages.push({...this.newMessage});
+            }
+
+            this.newMessage.message = '';
         }
     }
 

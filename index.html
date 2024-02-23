@@ -189,11 +189,20 @@
                         </div>
     
                         <div class="message-bar">
-                            <input id="message-input" type="text" placeholder="Scrivi un messaggio">
+                            <input 
+                                v-model="newMessage.message"
+                                id="message-input" 
+                                type="text" 
+                                placeholder="Scrivi un messaggio"
+                                @keyup.enter="sendMessage"
+                            >
                         </div>
     
                         <div class="send-message flex">
-                            <i class="fa-solid fa-paper-plane"></i>
+                            <i 
+                                @click="sendMessage()"
+                                class="fa-solid fa-paper-plane">
+                            </i>
                         </div>
                     </div>
     
