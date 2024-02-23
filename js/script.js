@@ -175,11 +175,17 @@ createApp({
             ],
 
 
-            newMessage: {
+            messageSent: {
                 message: '',
                 status: 'sent',
                 date: '10/01/2020 15:30:55'
-            }
+            },
+
+            messageReceived: {
+                message: 'ok',
+                status: 'received',
+                date: '10/01/2020 15:30:55'
+            },
             
 
         }
@@ -201,14 +207,26 @@ createApp({
         },
 
         // metodo per inviare nuovo messaggio
-        sendMessage() {
-            if(this.newMessage.message.trim() != '') {
+        sendNewMessage() {
+            if(this.messageSent.message.trim() != '') {
 
-                this.contacts[this.currentChat].messages.push({...this.newMessage});
+                this.contacts[this.currentChat].messages.push({...this.messageSent});
             }
 
-            this.newMessage.message = '';
-        }
+            this.messageSent.message = '';
+        },
+
+        // funzione che fa ricevere un messaggio
+        receiveNewMessage() {
+
+            // delay della risposta di un secondo
+            setTimeout(() => {
+                this.contacts[this.currentChat].messages.push({...this.messageReceived});
+            }, 1000);
+            
+        },
+
+        
     }
 
 }).mount('#app');
