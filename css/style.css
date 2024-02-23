@@ -292,6 +292,11 @@ main {
 
 .send-message i {
     cursor: pointer;
+    transition: .2s ease;
+}
+.send-message i:hover {
+    transform: scale(1.2);
+    color: #8EDAFC;
 }
 
 .message-bar {
