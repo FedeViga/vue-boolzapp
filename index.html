@@ -177,13 +177,21 @@
                     >
     
                         <div 
-                            v-for="currentMessage in contacts[index].messages"
+                            v-for="(currentMessage, messageIndex) in contacts[index].messages"
                             :class="'message ' + currentMessage.status">
                             <p>
                                 {{currentMessage.message}}
                             </p>
                             <div class="time">
                                 {{getHoursMins(currentMessage.date)}}
+                            </div>
+
+                            <div class="delete">
+
+                                <i 
+                                    @click="deleteMessage(messageIndex)"
+                                    class="fa-solid fa-trash-can"></i>
+
                             </div>
                         </div>
     

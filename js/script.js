@@ -242,6 +242,11 @@ createApp({
 
                 }
             });
+        },
+
+        // funzione per eliminare un messaggio
+        deleteMessage(index) {
+            this.contacts[this.currentChat].messages.splice(index, 1)
         }
     }
 

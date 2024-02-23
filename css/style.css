@@ -249,6 +249,32 @@ main {
     color: #8a8a8a;
 }
 
+.message .delete {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    font-size: 14px;
+
+    display: none;
+}
+
+.message .fa-trash-can:hover {
+    color: red;
+}
+
+.message .fa-trash-can:hover .delete {
+    display: block;
+}
+
+.message:hover .delete {
+    display: block;
+}
+
+.delete {
+    position: absolute;
+    display: none;
+}
+
 #send-message-bar {
     height: 74px;
     background-color: #F3EEEA;
