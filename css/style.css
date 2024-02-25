@@ -32,6 +32,7 @@
 
 i {
     cursor: pointer;
+    transition: .2s ease;
 }
 /* fine common */
 
@@ -71,13 +72,14 @@ main {
     height: calc(100vh - 25px - 25px);
     position: relative;
     top: -125px;
+    box-shadow: 10px 10px 50px 10px rgba(0, 0, 0, 0.342);
 }
 /* fine main */
 
 
 /* left bar */
 #left-bar {
-    width: 30%;
+    width: 560px;
     height: 100%;
     border-right: 1px solid lightgray;
 }
@@ -135,7 +137,11 @@ main {
     border-right: 0px;
     color: lightgray;
     cursor: pointer;
+}
 
+.search-bar .button:hover i {
+    transform: scale(1.1);
+    color: #8EDAFC;
 }
 
 #search-input {
@@ -146,7 +152,7 @@ main {
 }
 
 #chat-list {
-    overflow-y: scroll;
+    overflow-y: auto;
     background-color: white;
     height: calc(100% - 70px - 84px - 50px);
 }
@@ -191,7 +197,7 @@ main {
 
 /* main content */
 #main-content {
-    width: 70%;
+    width: calc(100% - 560px);
     height: 100%;
 }
 
@@ -208,16 +214,32 @@ main {
     gap: 0;
 }
 
+#main-content .chat-profile i {
+    display: none;
+    font-size: 30px;
+    margin-left: 10px;
+    color: #B1B1B1;
+}
+
+#main-content .chat-profile i:hover {
+    transform: scale(1.1);
+    color: #8EDAFC;
+}
+
 .contact-info p {
     font-size: 14px;
     color:#8a8a8a;
+    max-width: 380px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .chat-content {
     background-image: url(../img/mine.jpg);
     height: calc(100% - 70px - 74px);
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 50px 100px;
 }
 
@@ -290,10 +312,6 @@ main {
 
 }
 
-.send-message i {
-    cursor: pointer;
-    transition: .2s ease;
-}
 .send-message i:hover {
     transform: scale(1.2);
     color: #8EDAFC;
@@ -312,6 +330,76 @@ main {
     font-size: 16px;
 }
 /* fine main content */
+
+
+/* media query  */
+@media screen and (max-width: 1200px) {
+    
+    #left-bar {
+        width: 400px;
+    }
+
+    .contact-info p {
+        max-width: 240px;
+    }
+
+    #main-content {
+        width: calc(100% - 400px);
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    #left-bar {
+        width: 300px;
+    }
+
+    .contact-info p {
+        max-width: 140px;
+    }
+
+    #main-content {
+        width: calc(100% - 300px);
+    }
+
+    .chat-content {
+        padding: 50px 20px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    #left-bar {
+        width: 100%;
+    }
+
+    #main-content {
+        width: 100%;
+    }
+
+    .contact-info p {
+        max-width: 400px;
+    }
+
+
+    .chat-content {
+        padding: 50px 20px;
+    }
+
+    .mobile-hidden {
+        display: none;
+    }
+
+    .mobile-active {
+        display: block;
+    }
+
+    #main-content .chat-profile i {
+        display: block;
+    }
+}
+/* fine media query  */
 
 
 

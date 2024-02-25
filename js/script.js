@@ -208,24 +208,25 @@ createApp({
             return date.slice(11).slice(0, 5);
         },
 
-        // metodo per inviare nuovo messaggio
+        // metodo per inviare nuovo messaggio e ricevere risposta automatica
         sendNewMessage() {
+
+            // controllo che il testo del messaggio non sia vuoto
             if(this.messageSent.message.trim() != '') {
 
+                // pusho il messaggio e resetto il campo di input
                 this.contacts[this.currentChat].messages.push({...this.messageSent});
+                this.messageSent.message = '';
+                
+                // variabile che serve a ricevere il messaggio nella chat in cui viene inviato anche se clicco subito su un'altra chat
+                let currentChatResponse = this.currentChat;
+
+                // delay della risposta di un secondo
+                setTimeout(() => {
+                    this.contacts[currentChatResponse].messages.push({...this.messageReceived});
+                }, 1000);
             }
 
-            this.messageSent.message = '';
-        },
-
-        // funzione che fa ricevere un messaggio
-        receiveNewMessage() {
-
-            // delay della risposta di un secondo
-            setTimeout(() => {
-                this.contacts[this.currentChat].messages.push({...this.messageReceived});
-            }, 1000);
-            
         },
 
         // funzione per filtrare i contatti
@@ -247,7 +248,25 @@ createApp({
         // funzione per eliminare un messaggio
         deleteMessage(index) {
             this.contacts[this.currentChat].messages.splice(index, 1)
+        },
+
+        // funzione per aprire la chat in versione mobile
+        openChatMobile() {
+            document.querySelector('#left-bar').classList.add('mobile-hidden');
+            document.querySelector('#left-bar').classList.remove('mobile-active');
+            document.querySelector('#main-content').classList.add('mobile-active');
+            document.querySelector('#main-content').classList.remove('mobile-hidden');
+
+        },
+
+        // funzione per chuidere la chat in versione mobile
+        closeChatMobile() {
+            document.querySelector('#left-bar').classList.remove('mobile-hidden');
+            document.querySelector('#left-bar').classList.add('mobile-active');
+            document.querySelector('#main-content').classList.remove('mobile-active');
+            document.querySelector('#main-content').classList.add('mobile-hidden');
         }
+        
     }
 
 }).mount('#app');

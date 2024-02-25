@@ -38,7 +38,7 @@
             <main>
     
                 <!-- barra laterale con i contatti -->
-                <div id="left-bar">
+                <div id="left-bar" class="mobile-active">
     
                     <!-- barra profilo -->
                     <div class="profile flex">
@@ -99,7 +99,7 @@
                             v-show="currentContact.visible"
                             class="chat flex "
                             :class="index == currentChat ? 'active' : ''"
-                            @click="activeChat(index)"
+                            @click="activeChat(index); openChatMobile()"
                         >
     
                             <div class="chat-profile flex">
@@ -114,15 +114,20 @@
                                         {{currentContact.name}}
                                     </h3>
             
-                                    <p>
+                                    <p v-if="currentContact.messages.length > 0">
                                         {{currentContact.messages[currentContact.messages.length - 1].message}}
+                                    </p>
+
+                                    <p v-else>
+                                        Invia un messaggio a {{currentContact.name}}
                                     </p>
             
                                 </div>
     
                             </div>
     
-                            <p class="time flex">
+                            <p v-if="currentContact.messages.length > 0"
+                                class="time flex">
                                 {{getHoursMins(currentContact.messages[currentContact.messages.length - 1].date)}}
                             </p>
     
@@ -133,7 +138,7 @@
                 </div>
     
                 <!-- contenuto principale della chat -->
-                <div id="main-content">
+                <div id="main-content" class="mobile-hidden">
     
                     <!-- barra profilo -->
                     <div v-for="(currentContact, index) in contacts"
@@ -142,6 +147,11 @@
                     >
     
                         <div class="chat-profile flex">
+
+                            <i 
+                                @click="closeChatMobile()"
+                                class="fa-solid fa-chevron-left"
+                            ></i>
                                 
                             <!-- immagine -->
                             <img :src="currentContact.avatar" :alt="'immagine profilo ' + (index + 1)">
@@ -212,7 +222,7 @@
                                 id="message-input" 
                                 type="text" 
                                 placeholder="Scrivi un messaggio"
-                                @keyup.enter="sendNewMessage(); receiveNewMessage()"
+                                @keyup.enter="sendNewMessage()"
                             >
                         </div>
     
@@ -220,7 +230,7 @@
                             <div v-if="messageSent.message.trim('') != ''">
 
                                 <i 
-                                    @click="sendNewMessage(); receiveNewMessage()"
+                                    @click="sendNewMessage()"
                                     class="fa-solid fa-paper-plane">
                                 </i>
                             </div>
