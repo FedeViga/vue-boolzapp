@@ -265,6 +265,11 @@ createApp({
             document.querySelector('#left-bar').classList.add('mobile-active');
             document.querySelector('#main-content').classList.remove('mobile-active');
             document.querySelector('#main-content').classList.add('mobile-hidden');
+        },
+
+        switchDarkMode() {
+            document.querySelector("body").classList.toggle("dark-body")
+            document.querySelector("#app").classList.toggle("dark-mode")
         }
         
     }

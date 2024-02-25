@@ -94,7 +94,11 @@ main {
     padding-right: 20px;
     color: #B1B1B1;
     font-size: 20px;
+}
 
+.fa-circle-half-stroke:hover {
+    transform: scale(1.1);
+    color: black;
 }
 
 #notifications {
@@ -352,6 +356,78 @@ main {
 }
 /* fine main content */
 
+/* dark mode */
+.dark-body {
+    background-color: rgb(63, 63, 63);
+}
+
+.dark-mode {
+    color: white;
+}
+
+.dark-mode #left-bar {
+    border-color: rgb(80, 80, 80);
+}
+
+.dark-mode .profile {
+    background-color: rgb(31, 31, 31);
+}
+
+.dark-mode .fa-circle-half-stroke:hover {
+    color: white;
+}
+
+.dark-mode #notifications {
+    background-color: rgb(44, 44, 44);
+    border-bottom: 1px solid;
+    border-color: rgb(80, 80, 80);
+}
+
+.dark-mode #notifications i {
+    color: rgb(44, 44, 44);
+}
+
+.dark-mode .fa-bell-slash {
+    background-color: white;
+    color: rgb(31, 31, 31);
+}
+
+.dark-mode .notification-info a {
+    color: white;
+}
+
+.dark-mode .search-bar {
+    background-color: rgb(31, 31, 31);
+}
+
+.dark-mode #chat-list {
+    background-color: rgb(31, 31, 31);
+}
+
+.dark-mode .chat {
+    border-color: rgb(80, 80, 80);
+}
+.dark-mode .chat:hover {
+    background-color: rgb(75, 75, 75);
+}
+
+.dark-mode .chat.active {
+    background-color: rgb(65, 65, 65);
+}
+
+.dark-mode .chat-content {
+    background-color: rgb(85, 85, 85);
+    background-blend-mode: multiply;
+}
+
+.dark-mode .message {
+    color: black;
+}
+
+.dark-mode #send-message-bar {
+    background-color: rgb(31, 31, 31);
+}
+/* fine dark mode */
 
 /* media query  */
 @media screen and (max-width: 992px) {
