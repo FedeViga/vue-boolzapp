@@ -182,13 +182,25 @@ createApp({
             },
 
             messageReceived: {
-                message: 'ok',
+                message: '',
                 status: 'received',
                 date: '10/01/2020 15:30:55'
             },
 
-            ChatUserName: ''
-            
+            ChatUserName: '',
+
+            randomResponseArray: [
+                'ora non posso, ti chiamo stasera',
+                'va bene',
+                'Che bella idea!',
+                'Puoi spiegarmelo meglio?',
+                'Non vedo l\' ora',
+                'Grazie per avermelo detto',
+                'Forse potremmo trovare un compromesso. Che ne dici?',
+                'Mmm, non sono sicuro',
+                'Wow, che emozione!',
+                'Non ci avevo pensato, hai ragione!',
+            ],
 
         }
         
@@ -223,6 +235,8 @@ createApp({
 
                 // delay della risposta di un secondo
                 setTimeout(() => {
+                    let randomResponse = this.randomResponseArray[Math.floor((Math.random() * this.randomResponseArray.length))];
+                    this.messageReceived.message = randomResponse;
                     this.contacts[currentChatResponse].messages.push({...this.messageReceived});
                 }, 1000);
             }
