@@ -97,7 +97,7 @@
                         <div 
                             v-for="(currentContact, index) in contacts"
                             v-show="currentContact.visible"
-                            class="chat flex "
+                            class="chat flex"
                             :class="index == currentChat ? 'active' : ''"
                             @click="activeChat(index); openChatMobile()"
                         >

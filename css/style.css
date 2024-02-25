@@ -79,7 +79,7 @@ main {
 
 /* left bar */
 #left-bar {
-    width: 560px;
+    width: 35%;
     height: 100%;
     border-right: 1px solid lightgray;
 }
@@ -152,13 +152,16 @@ main {
 }
 
 #chat-list {
+    width: 100%;
     overflow-y: auto;
     background-color: white;
     height: calc(100% - 70px - 84px - 50px);
 }
 
 .chat {
+    position: relative;
     height: 80px;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid lightgray;
@@ -178,6 +181,7 @@ main {
     align-items: center;
     padding-left: 20px;
     gap: 20px;
+    width: 100%;
 }
 
 .chat img {
@@ -187,31 +191,56 @@ main {
 }
 
 .chat .time {
+    position: absolute;
+    top: 0;
+    right: 0;
     padding: 10px;
     align-self: flex-start;
     font-size: 12px;
     color: #8a8a8a;
+}
+
+.contact-info {
+    flex-direction: column;
+    padding-right: 10px;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.contact-info p {
+    font-size: 14px;
+    color:#8a8a8a;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 /* fine left bar */
 
 
 /* main content */
 #main-content {
-    width: calc(100% - 560px);
+    width: 65%;
     height: 100%;
-}
-
-.contact-info {
-    flex-direction: column;
 }
 
 #main-content .profile {
     justify-content: space-between;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #main-content .chat-profile {
     padding-left: 0;
     gap: 0;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #main-content .chat-profile i {
@@ -226,14 +255,6 @@ main {
     color: #8EDAFC;
 }
 
-.contact-info p {
-    font-size: 14px;
-    color:#8a8a8a;
-    max-width: 380px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
 
 .chat-content {
     background-image: url(../img/mine.jpg);
@@ -333,34 +354,7 @@ main {
 
 
 /* media query  */
-@media screen and (max-width: 1200px) {
-    
-    #left-bar {
-        width: 400px;
-    }
-
-    .contact-info p {
-        max-width: 240px;
-    }
-
-    #main-content {
-        width: calc(100% - 400px);
-    }
-}
-
 @media screen and (max-width: 992px) {
-
-    #left-bar {
-        width: 300px;
-    }
-
-    .contact-info p {
-        max-width: 140px;
-    }
-
-    #main-content {
-        width: calc(100% - 300px);
-    }
 
     .chat-content {
         padding: 50px 20px;
@@ -378,11 +372,6 @@ main {
         width: 100%;
     }
 
-    .contact-info p {
-        max-width: 400px;
-    }
-
-
     .chat-content {
         padding: 50px 20px;
     }
@@ -397,6 +386,24 @@ main {
 
     #main-content .chat-profile i {
         display: block;
+    }
+
+}
+
+@media screen and (max-width: 576px){
+
+    .message {
+        max-width: 300px;
+        font-size: 14px;
+    }
+
+    .chat-emotes,
+    .send-message {
+        width: 60px;
+    }
+
+    .message-bar {
+        width: calc(100% - 120px);
     }
 }
 /* fine media query  */
