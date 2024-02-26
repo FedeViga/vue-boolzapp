@@ -88,7 +88,51 @@
                             <a href="#">Attiva notifiche desktop</a>
                         </div>
                     </div>
+                    
+                    <!-- aggiungi nuovo contatto -->
+                    <div id="new-chat">
+
+                        <div class="add flex" @click="newConversation()">
+                            
+                            <i class="fa-solid fa-plus"></i>
     
+                            <span>Nuova Conversazione</span>
+
+                        </div>
+
+                        <div class="new-contact d-none">
+                            <h3>
+                                Nome Contatto
+                            </h3>
+                            <input 
+                                v-model="newContact.name"
+                                type="text"
+                            >
+                            <h3>
+                                Link Immagine Profilo
+                            </h3>
+                            <input 
+                                v-model="newContact.avatar"
+                                type="text"
+                            >
+                            <div>
+                                <div 
+                                    @click="addNewContact"
+                                    class="button"
+                                >
+                                    Conferma
+                                </div>
+
+                                <div 
+                                    @click="cancelNewConversation()"
+                                    class="button"
+                                >
+                                    Annulla
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- barra di ricerca -->
                     <div class="search-bar flex">
     
@@ -164,9 +208,9 @@
                     </div>
     
                     <!-- barra profilo -->
-                    <div v-for="(currentContact, index) in contacts"
-                        v-show="index == currentChat"
+                    <div 
                         class="profile flex"
+                        v-if="currentChat != null"
                     >
     
                         <div class="chat-profile flex">
@@ -177,13 +221,13 @@
                             ></i>
                                 
                             <!-- immagine -->
-                            <img :src="currentContact.avatar" :alt="'immagine profilo ' + (index + 1)">
+                            <img :src="contacts[currentChat].avatar" :alt="'immagine profilo ' + (currentChat + 1)">
     
                             <!-- info contatto -->
                             <div class="contact-info flex">
         
                                 <h3>
-                                    {{currentContact.name}}
+                                    {{contacts[currentChat].name}}
                                 </h3>
         
                                 <p>

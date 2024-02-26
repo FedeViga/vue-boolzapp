@@ -34,6 +34,14 @@ i {
     cursor: pointer;
     transition: .2s ease;
 }
+
+.d-block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
 /* fine common */
 
 
@@ -152,6 +160,68 @@ main {
     font-size: 14px;
 }
 
+#new-chat {
+    position: relative;
+    background-color: #FAFAFA;
+    padding: 10px 10px;
+    border-bottom: 1px solid lightgray;
+    color: black;
+}
+
+.add {
+    align-items: center;
+    gap: 10px;
+}
+
+.add:hover {
+    cursor: pointer;
+}
+
+#new-chat i {
+    font-size: 20px;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.new-contact {
+    position: absolute;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    height: calc(100vh - 70px - 84px - 50px);
+    top: 0px;
+    left: 0;
+    z-index: 1;
+    padding: 20px;
+    cursor: auto;
+}
+
+.new-contact h3 {
+    margin-bottom: 5px;
+}
+
+.new-contact input {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 10px;
+    height: 24px;
+}
+
+.new-contact .button {
+    display: inline-block;
+    padding: 10px;
+    background-color: #8EDAFC;
+    margin: 10px 10px;
+    border-radius: 10px;
+    transition: .2s ease;
+}
+
+.new-contact .button:hover {
+    cursor: pointer;
+    background-color: #b6e8ff;
+}
+
 .search-bar {
     height: 50px;
     background-color: #FAFAFA;
@@ -188,7 +258,7 @@ main {
     width: 100%;
     overflow-y: auto;
     background-color: white;
-    height: calc(100% - 70px - 84px - 50px);
+    height: calc(100% - 70px - 84px - 50px - 53px);
 }
 
 .chat {
@@ -448,6 +518,27 @@ main {
 .dark-mode .fa-bell-slash {
     background-color: white;
     color: rgb(31, 31, 31);
+}
+
+.dark-mode #new-chat {
+    background-color: rgb(31, 31, 31);
+    color: white;
+}
+
+.dark-mode #new-chat i {
+    border-color: white;
+}
+
+.dark-mode .new-contact {
+    background-color: rgb(31, 31, 31);
+}
+
+.dark-mode .new-contact .button {
+    background-color: rgb(44, 44, 44);
+}
+
+.dark-mode .new-contact .button:hover {
+    background-color: rgb(78, 78, 78)
 }
 
 .dark-mode .notification-info a {

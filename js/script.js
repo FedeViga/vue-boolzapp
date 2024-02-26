@@ -210,6 +210,14 @@ createApp({
             // booleano active
             active: false,
 
+            // nuovo contatto da aggiungere alla lista
+            newContact: {
+                name: '',
+                avatar: '',
+                visible: true,
+                messages: []
+            },
+
         }
         
     },
@@ -312,7 +320,36 @@ createApp({
             this.currentChat = null;
             this.active = !this.active;
             this.closeChatMobile();
+        },
+
+        // funzione per aprire la pagina di creazione nuova conversazione
+        newConversation() {
+            this.currentChat = null;
+            document.querySelector(".new-contact").classList.add("d-block");
+            document.querySelector(".new-contact").classList.remove("d-none");
+        },
+
+        // funzione per annullare la pagina di creazione nuova conversazione
+        cancelNewConversation() {
+            document.querySelector(".new-contact").classList.remove("d-block");
+            document.querySelector(".new-contact").classList.add("d-none");
+        },
+
+        // aggiungere il nuovo contatto
+        addNewContact() {
+
+            if(this.newContact.name.trim() != '' && this.newContact.avatar.trim() != '' ) {
+                this.contacts.unshift({...this.newContact});
+                document.querySelector(".new-contact").classList.remove("d-block");
+                document.querySelector(".new-contact").classList.add("d-none");
+                this.newContact.name = "";
+                this.newContact.avatar = "";
+                this.newContact.messages = [];
+                this.currentChat = 0;
+                this.openChatMobile()
+            }
         }
+
         
     },
 
