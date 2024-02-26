@@ -237,7 +237,7 @@ main {
     flex-direction: column;
     padding-right: 10px;
     
-    overflow: hidden;
+    overflow-x: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -246,7 +246,7 @@ main {
     font-size: 14px;
     color:#8a8a8a;
     
-    overflow: hidden;
+    overflow-x: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -257,6 +257,7 @@ main {
 #main-content {
     width: 63%;
     height: 100%;
+    position: relative;
 }
 
 #choose-contact {
@@ -271,7 +272,7 @@ main {
 #main-content .profile {
     justify-content: space-between;
 
-    overflow: hidden;
+    overflow-x: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -280,7 +281,7 @@ main {
     padding-left: 0;
     gap: 0;
 
-    overflow: hidden;
+    overflow-x: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -297,6 +298,25 @@ main {
     color: #8EDAFC;
 }
 
+.dropdown {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid rgb(197, 197, 197);
+    z-index: 2;
+    color: black;
+    font-size: 16px;
+}
+
+.dropdown div {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.dropdown div:hover {
+    background-color: rgb(228, 228, 228);
+    user-select: none;
+}
 
 .chat-content {
     background-image: url(../img/mine.jpg);
@@ -453,10 +473,15 @@ main {
     background-color: rgb(65, 65, 65);
 }
 
+.dark-mode #choose-contact {
+    background-color: rgb(31, 31, 31);
+}
+
 .dark-mode .chat-content {
     background-color: rgb(85, 85, 85);
     background-blend-mode: multiply;
 }
+
 
 .dark-mode .message {
     color: black;

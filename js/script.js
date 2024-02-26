@@ -8,8 +8,10 @@ createApp({
 
         return {
             
+            // counter della chat attiva
             currentChat: null,
 
+            // lista contatti
             contacts: [
                 {
                     name: 'Michele',
@@ -174,21 +176,24 @@ createApp({
                 }
             ],
 
-
+            // messaggio inviato
             messageSent: {
                 message: '',
                 status: 'sent',
                 date: '10/01/2020 15:30:55'
             },
 
+            // messaggio ricevuto
             messageReceived: {
                 message: '',
                 status: 'received',
                 date: '10/01/2020 15:30:55'
             },
 
+            // nome del contatto inserito nell'input di ricerca
             ChatUserName: '',
 
+            // array di risposte random
             randomResponseArray: [
                 'ora non posso, ti chiamo stasera',
                 'va bene',
@@ -201,6 +206,9 @@ createApp({
                 'Wow, che emozione!',
                 'Non ci avevo pensato, hai ragione!',
             ],
+
+            // booleano active
+            active: false,
 
         }
         
@@ -281,9 +289,29 @@ createApp({
             document.querySelector('#main-content').classList.add('mobile-hidden');
         },
 
+        // funzione per switchare a dark mode
         switchDarkMode() {
             document.querySelector("body").classList.toggle("dark-body")
             document.querySelector("#app").classList.toggle("dark-mode")
+        },
+
+        // aprire e chiudere dropdown
+        toggleDropdown() {
+            this.active = !this.active
+        },
+
+        // funzione per eliminare tutti i messaggi della chat attiva
+        deleteAllMessages() {
+            this.contacts[this.currentChat].messages = []
+            this.active = !this.active
+        },
+
+        // funzione per eliminare la chat attiva
+        deleteChat() {
+            this.contacts.splice(this.currentChat, 1);
+            this.currentChat = null;
+            this.active = !this.active;
+            this.closeChatMobile();
         }
         
     },

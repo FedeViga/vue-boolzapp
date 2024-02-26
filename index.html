@@ -197,7 +197,22 @@
                         <div class="profile-icons flex">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <i class="fa-solid fa-paperclip"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i 
+                                @click="toggleDropdown"
+                                class="fa-solid fa-ellipsis-vertical"
+                            ></i>
+
+                            <div 
+                                class="dropdown"
+                                v-if="active"
+                            >
+                                <div @click="deleteAllMessages()">
+                                    Elimina Messaggi
+                                </div>
+                                <div @click="deleteChat">
+                                    Elimina Chat
+                                </div>
+                            </div>
                         </div>
     
                     </div>
