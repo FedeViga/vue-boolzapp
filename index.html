@@ -36,7 +36,20 @@
     
             <!-- main -->
             <main>
-    
+                
+                <div id="splash">
+
+                    <div>
+
+                        <h1>
+                            Benvenuto Su Boolzapp, l'app di messaggistica by Boolean
+                        </h1>
+
+                    </div>
+
+
+                </div>
+
                 <!-- barra laterale con i contatti -->
                 <div id="left-bar" class="mobile-active">
     
@@ -143,6 +156,12 @@
     
                 <!-- contenuto principale della chat -->
                 <div id="main-content" class="mobile-hidden">
+
+                    <div id="choose-contact" class="flex" v-if="currentChat == null">
+                        <h3>
+                            Seleziona un contatto dalla tua lista di contatti per iniziare a chattare
+                        </h3>
+                    </div>
     
                     <!-- barra profilo -->
                     <div v-for="(currentContact, index) in contacts"
@@ -214,7 +233,7 @@
                     </div>
     
                     <!-- bottom bar per inviare messaggio -->
-                    <div id="send-message-bar" class="flex">
+                    <div id="send-message-bar" class="flex" v-if="currentChat != null">
     
                         <div class="chat-emotes flex">
                             <i class="fa-regular fa-face-smile"></i>

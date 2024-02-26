@@ -8,7 +8,7 @@ createApp({
 
         return {
             
-            currentChat: 0,
+            currentChat: null,
 
             contacts: [
                 {
@@ -286,6 +286,14 @@ createApp({
             document.querySelector("#app").classList.toggle("dark-mode")
         }
         
+    },
+
+    mounted() {
+
+        // smetto di visualizzare la pagina di benvenuto dopo due secondi dall'apertura dell'app
+        setTimeout(() => {
+            document.querySelector("#splash").classList.add("hidden")
+        }, 2000);
     }
 
 }).mount('#app');
