@@ -37,6 +37,7 @@
             <!-- main -->
             <main>
                 
+                <!-- splash visibile all'apertura della pagina -->
                 <div id="splash">
 
                     <div>
@@ -64,10 +65,12 @@
                         </div>
     
                         <div class="profile-icons flex">
+
                             <i 
                                 @click="switchDarkMode"
-                                class="fa-solid fa-circle-half-stroke">
-                            </i>
+                                class="fa-solid fa-circle-half-stroke"
+                            ></i>
+
                             <i class="fa-solid fa-circle-notch"></i>
                             <i class="fa-solid fa-message"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -92,7 +95,10 @@
                     <!-- aggiungi nuovo contatto -->
                     <div id="new-chat">
 
-                        <div class="add flex" @click="newConversation()">
+                        <div 
+                            class="add flex" 
+                            @click="newConversation()"
+                        >
                             
                             <i class="fa-solid fa-plus"></i>
     
@@ -101,20 +107,25 @@
                         </div>
 
                         <div class="new-contact d-none">
+
                             <h3>
                                 Nome Contatto
                             </h3>
+
                             <input 
                                 v-model="newContact.name"
                                 type="text"
                             >
+
                             <h3>
                                 Link Immagine Profilo
                             </h3>
+
                             <input 
                                 v-model="newContact.avatar"
                                 type="text"
                             >
+
                             <div>
                                 <div 
                                     @click="addNewContact"
@@ -187,8 +198,10 @@
     
                             </div>
     
-                            <p v-if="currentContact.messages.length > 0"
-                                class="time flex">
+                            <p 
+                                v-if="currentContact.messages.length > 0"
+                                class="time flex"
+                            >
                                 {{getHoursMins(currentContact.messages[currentContact.messages.length - 1].date)}}
                             </p>
     
@@ -201,10 +214,16 @@
                 <!-- contenuto principale della chat -->
                 <div id="main-content" class="mobile-hidden">
 
-                    <div id="choose-contact" class="flex" v-if="currentChat == null">
+                    <div 
+                        id="choose-contact" 
+                        class="flex" 
+                        v-if="currentChat == null"
+                    >
+
                         <h3>
                             Seleziona un contatto dalla tua lista di contatti per iniziare a chattare
                         </h3>
+
                     </div>
     
                     <!-- barra profilo -->
@@ -239,6 +258,7 @@
                         </div>
     
                         <div class="profile-icons flex">
+
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <i class="fa-solid fa-paperclip"></i>
                             <i 
@@ -253,6 +273,7 @@
                                 <div @click="deleteAllMessages()">
                                     Elimina Messaggi
                                 </div>
+
                                 <div @click="deleteChat">
                                     Elimina Chat
                                 </div>
@@ -270,10 +291,12 @@
     
                         <div 
                             v-for="(currentMessage, messageIndex) in contacts[index].messages"
-                            :class="'message ' + currentMessage.status">
+                            :class="'message ' + currentMessage.status"
+                        >
                             <p>
                                 {{currentMessage.message}}
                             </p>
+
                             <div class="time">
                                 {{getHoursMins(currentMessage.date)}}
                             </div>
@@ -282,7 +305,8 @@
 
                                 <i 
                                     @click="deleteMessage(messageIndex)"
-                                    class="fa-solid fa-trash-can"></i>
+                                    class="fa-solid fa-trash-can"
+                                ></i>
 
                             </div>
                         </div>
@@ -313,9 +337,11 @@
 
                                 <i 
                                     @click="sendNewMessage()"
-                                    class="fa-solid fa-paper-plane">
-                                </i>
+                                    class="fa-solid fa-paper-plane"
+                                ></i>
+
                             </div>
+                            
                             <div v-else>
                                 <i class="fa-solid fa-microphone"></i>
                             </div>

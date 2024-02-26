@@ -241,7 +241,7 @@ createApp({
 
             // controllo che il testo del messaggio non sia vuoto
             if(this.messageSent.message.trim() != '') {
-
+                
                 // pusho il messaggio e resetto il campo di input
                 this.contacts[this.currentChat].messages.push({...this.messageSent});
                 this.messageSent.message = '';
